@@ -1,0 +1,173 @@
+@font-face {
+    font-family: young-serif;
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format(truetype);
+}
+@font-face {
+    font-family: outfit;
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+body {
+    background-color: hsl(30, 54%, 90%);
+    font-family: outfit;
+    font-weight: 400;
+    color: hsl(30, 10%, 34%);
+    margin: 0;
+}
+.main {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    border-radius: inherit;
+}
+#main{
+    padding: 5%;
+}
+h1,
+h2 {
+    font-family: young-serif;
+    font-weight: bolder;
+    color: hsl(24, 5%, 18%);
+}
+.recipe {
+    margin-top: 5%;
+}
+.prep {
+    background-color: hsl(330, 100%, 98%);
+    padding: 10px;
+    border-radius: inherit;
+    color: hsl(30, 10%, 34%);
+}
+.prep h3 {
+    color: hsl(332, 51%, 31%);
+    padding-left: 15px;
+}
+ul {
+    list-style: none;
+    padding-left: 1.5em;
+    color: hsl(30, 10%, 34%);
+}
+ul li {
+    margin: 15px auto;
+}
+ul li::before {
+    content: "•";
+    font-weight: bold;
+    color: hsl(332, 51%, 31%);
+    padding-right: 1.5em;
+}
+h2 {
+    color: hsl(14, 45%, 36%);
+    font-weight: 300;
+}
+.ingredients {
+    padding-left: 0.4em;
+}
+.ingredients {
+    position: relative;
+    padding-left: 30px;
+}
+.ingredients li::before {
+    position: absolute;
+    color: hsl(14, 45%, 36%);
+    left: 0;
+}
+hr {
+    height: 1px;
+    background-color: hsl(30, 18%, 87%);
+    border: none;
+    margin: 2em auto;
+}
+ol {
+    padding-left: 0.4em;
+    counter-reset: li;
+    color: hsl(30, 10%, 34%);
+}
+ol li {
+    list-style: none;
+    margin: 15px auto;
+    counter-increment: li;
+    position: relative;
+    padding-left: 30px;
+}
+ol li::before {
+    position: absolute;
+    content: counter(li) ".";
+    font-weight: bold;
+    color: hsl(14, 45%, 36%);
+    left: 0;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+tr {
+    height: 5vh;
+}
+td {
+    border-bottom: 1px solid black;
+    border-color: hsl(30, 18%, 87%);
+}
+td:first-child {
+    position: relative;
+    left: 1.8em;
+}
+tr:last-child td {
+    border-bottom: 0;
+}
+
+td:last-child {
+    font-weight: bold;
+    color: hsl(14, 45%, 36%);
+}
+
+.attribution{
+    margin-top: 2%;
+}
+
+@media (min-width: 768px) {
+    .main {
+        width: 70%;
+        margin: 3% auto;
+        padding: 3%;
+        border-radius: 10px;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .main {
+        width: 50%;
+        margin: 8% auto;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    h1,
+    h2 {
+        font-size: 2rem;
+    }
+
+    .recipe {
+        font-size: 3rem;
+    }
+
+    .prep {
+        padding: 20px; /* Increase padding for larger screens */
+    }
+
+    ul,
+    ol {
+        padding-left: 2em; /* Increase indentation */
+    }
+}
